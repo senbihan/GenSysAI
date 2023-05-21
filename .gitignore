@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and logs
+.ipynb_checkpoints/
+.jupyter/
+.jupyter_cache/
+
+# Environment and virtualenvs
+venv/
+env/
+*.env
+pip-wheel-metadata/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.pycharm/
+*.pyproject/.DS_Store
+*.DS_Store
