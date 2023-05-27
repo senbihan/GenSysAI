@@ -50,7 +50,7 @@ with st.form(key='my_form'):
         cloud_option = st.selectbox('Preferred Cloud Provider', ('Any', 'Azure', 'AWS', 'GCP'))
     
     submit = st.form_submit_button(label='Generate')
-    st.info('The generation will take some time, please have patience...', icon="ℹ️")
+    st.info('The generation usually takes some time, please have patience...', icon="ℹ️")
 
 
 if submit and problem_statement != '' and problem_statement != DEFAULT_MESSAGE:

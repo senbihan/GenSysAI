@@ -4,10 +4,8 @@ GenSysAI is an experimental tool based on LLM that can help you design a distrib
 
 ---
 
-![](./docs/streamlit.jpeg)
+![](./docs/homepage.jpeg)
 
-## Demo
-![](./docs/demo.gif)
 
 ## Motivation
 
@@ -21,6 +19,10 @@ This is not a perfect solution, but this is an aid to you to create a more perfe
 ## Usage Guidelines
 
 If you want to run on terminal, Checkout the [main.py](./main.py) and run
+
+``shell
+pip -r requirements.txt
+``
 
 ```shell
 python main.py
