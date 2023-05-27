@@ -55,11 +55,11 @@ with st.form(key='my_form'):
 
 if submit and problem_statement != '' and problem_statement != DEFAULT_MESSAGE:
     
-    designer = SystemDesigner(llm=llm, cloud_provider=cloud_option, verbose=True)
+    designer = SystemDesigner(llm=llm, cloud_provider=cloud_option, verbose=False)
 
     try:
         designer.design(problem_statement=problem_statement)
         st.markdown(designer.generate_markdown())
     except Exception as e:
-        st.error(str(e))
+        st.error(e)
 

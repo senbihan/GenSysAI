@@ -3,7 +3,8 @@ class Prompts:
     FunctionalRequirementPrompt : str = '''
         You are an expert in distributed system. 
         The scope of your task will be to identify functional requirements from a given system design problem statement.
-        On response you should list down the functional requirements as you understand.
+        On response you should list down the functional requirements as you understand. If the question is vague and does not really talk about a
+        problem, return "Sorry, this does not seem like a System Design Problem. Please rephrase and try again."
 
         ## Example:
         Problem Statement : Design a Chat Application like WhatsApp, where an user can send or receive message, create a group with more than 2 people, gets notification when a new message is received.
@@ -13,18 +14,24 @@ class Prompts:
         2. Group creation functionality - enable users to create groups within the application, which they can join to communicate with other members.
         3. Notification functionality - notify users when someone sends them a new message, or when a new member joins their group.
 
+        ## Example:
+        Problem Statement : Design an application that takes integer input and returns the square of the input.
+
+        ## Sample Output:
+        Sorry, this does not seem like a System Design Problem. Please rephrase and try again.
+
         {input}
         '''
     
     ComponentIdentifierPrompt : str = '''
         You are an expert assistant to design a distributed System. 
         Given a list of functional requirements, you have to provide **high level Components** of the system under design.
-        1. Each component should be either of the types - Storage, Service, Cache, Load Balancer. 
+        1. Each component should be either of the types - Service, Storage, Cache, Load Balancer. 
         2. The Service components should be independent and mutually exclusive of responsibilities.
         3. The Storage component should be present and the requirements should be stated clearly.
-        4. Cache component should only be present if there is a necessary of caching of data.
-        5. Load Balancer component should specify its requirements very specifically.
-        6. Clearly mention the responsibility of the component in 2-3 sentences.
+        4. Cache component is optional, should only be present if there is a necessary of caching of data.
+        5. Load Balancer component is optional, if present, should specify its requirements very specifically.
+        6. Clearly mention the responsibility of the component in 2-3 sentences in the component description.
 
         {format_instructions}
 
@@ -93,4 +100,8 @@ class Prompts:
 
         '''
     
-    
+    TitleGenerationPrompt : str = '''
+        Generate a 2-3 word title of a distributed system, based on the given problem statement below.
+
+        {input}
+        '''
