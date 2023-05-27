@@ -21,8 +21,8 @@ This is not a perfect solution, but this is an aid to you to create a more perfe
 If you want to run on terminal, Checkout the [main.py](./main.py) and run
 
 ``shell
-pip -r requirements.txt
-``
+pip install -r requirements.txt
+```
 
 ```shell
 python main.py

@@ -1,3 +1,4 @@
 langchain==0.0.181
 pydantic==1.10.7
 streamlit==1.22.0
+python-dotenv==1.0.0
