@@ -38,7 +38,8 @@ DEFAULT_MESSAGE = 'Design a system that ...'
 
 
 #os.environ["OPENAI_API_KEY"] = open_ai_key
-llm = ChatOpenAI(temperature=0.1, max_tokens= 512, model_name='gpt-3.5-turbo')
+#llm = ChatOpenAI(temperature=0.1, max_tokens= 512, model_name='gpt-3.5-turbo')
+llm = OpenAI(temperature=0.1, max_tokens=512, model_name='text-davinci-003')
 
 # -- FORM --
 with st.form(key='my_form'): 

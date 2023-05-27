@@ -5,7 +5,7 @@ class Component(BaseModel):
     '''Represents a single component of a system'''
 
     name: str = Field(description="name of the component")
-    description: str = Field(description="a brief but to the point description of the component")
+    description: str = Field(description="a brief yet to the point, 2-3 line description of the component")
     component_type: str = Field(description="type of the component")
     
     # # You can add custom validation logic easily with Pydantic.
@@ -32,10 +32,19 @@ class ServiceComponent(BaseModel):
     '''Represents a Service Component with a design'''
     requirement: str = Field(description="Requirements of the service component")
     apis: List[str] = Field(description="apis of the service")
-    conclusion: str = Field(description="overall conclusions on the component")
+    conclusion: str = Field(description="an overall conclusions on the component, with additional information")
 
     def __str__(self) -> str:
         apistr = '\t'
         for api in self.apis:
             apistr += api + '\n\t'
-        return f'''#### Requirements:\n{self.requirement}\n#### APIs\n{apistr}\n#### Comments\n{self.conclusion}\n'''
+        return f'''
+            #### Requirements\n
+            {self.requirement}
+            \n
+            \n#### APIs\n
+            {apistr}
+            \n
+            \n#### Comments\n
+            {self.conclusion}
+            \n'''

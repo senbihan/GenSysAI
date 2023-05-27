@@ -8,6 +8,7 @@ from ..designdoc import DesignedComponent, DesignDocument
 import time
 
 SLEEP_TIME_IN_SECONDS = 65
+RPM_COUNT = 15
 
 class SystemDesigner:
     ''' The SystemDesigner class handles the entire design of the system '''
@@ -158,6 +159,6 @@ class SystemDesigner:
 
     def wait_if_tracked(self):
         
-        if self.track_request and self.current_request_count % 3 == 0:
+        if self.track_request and self.current_request_count % RPM_COUNT == 0:
             self._debug(f"Total request : {self.current_request_count}, Sleep for {SLEEP_TIME_IN_SECONDS} seconds")
             time.sleep(SLEEP_TIME_IN_SECONDS)

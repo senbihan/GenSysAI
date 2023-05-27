@@ -48,6 +48,7 @@ class Prompts:
         and which database should be appropriate for the data, 
         4. if there are different data types, consider different and best storage for each of them.
         5. Suggest a well-known cloud offering that satisfies the requirements for each data storage that you identified, from {cloud_provider} cloud provider.
+        6. Your output should be written in an organised and bullet points, like a formal design document.
 
         You should iterate to each of the points mentioned above to refine the design.
 
@@ -88,13 +89,13 @@ class Prompts:
     
     GenericComponentDesignerPrompt : str = '''
         You are an expert assistant to design a distributed System. 
-        Given an input about a component of a large system, you have to design the component.
+        Given an input about a single component of a large system, you have to design the component.
         1. You should understand the requirement of this component from the description.
-        2. You should enlist a few approaches to solve the problem and the requirement.
+        2. You should enlist a few popular and accepted approaches to solve the problem and the requirement.
         3. Suggest a well-known cloud offering that satisfies the requirement of the component from {cloud_provider} cloud provider.
 
         You should iterate to each of the points mentioned above to refine the design.
-        Your design should be very specific to the problem and do not generate extra outputs.
+        Your design should be very specific to the problem and should not generate extra outputs.
 
         {component}
 
