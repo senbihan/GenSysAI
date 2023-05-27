@@ -1,12 +1,12 @@
 from langchain.llms import BaseLLM
-from .models import System
+from ..models import System
 from langchain.output_parsers import PydanticOutputParser
 from langchain import PromptTemplate, LLMChain
-from .prompts import Prompts
-from .chains import ComponentIdenfierChain
+from ..prompts import Prompts
+from ..chains import ComponentIdenfierChain
+from .openaioperation import OpenAIOperation
 
-
-class ProblemAnalyzer:
+class ProblemAnalyzer(OpenAIOperation):
     '''Given a problem statement declaring a system to be designed
     , it analyzes and identifies the components of the systems'''
 
@@ -53,4 +53,7 @@ class ProblemAnalyzer:
         designed_system.functional_requirements = analyzed_output['chain_0']
 
         return designed_system
+    
+    def get_request_count(self):
+        return 2
     

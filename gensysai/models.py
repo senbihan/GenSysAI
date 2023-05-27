@@ -5,7 +5,7 @@ class Component(BaseModel):
     '''Represents a single component of a system'''
 
     name: str = Field(description="name of the component")
-    description: str = Field(description="description of the component")
+    description: str = Field(description="a brief but to the point description of the component")
     component_type: str = Field(description="type of the component")
     
     # # You can add custom validation logic easily with Pydantic.

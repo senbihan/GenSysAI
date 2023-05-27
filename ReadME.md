@@ -11,7 +11,7 @@ GenSysAI is an experimental tool based on LLM that can help you design a distrib
 
 ## Motivation
 
-While designing a large-scale distributed system, an individual Software Enginner or Architect has limitations on the knowledge of not only different strategies but techonologies from different cloud providers.
+While designing a large-scale distributed system, an individual Software Enginner or Architect has limitations on the knowledge of not only different strategies but technologies from different cloud providers.
 
 Although researching about the problem, reading different blogs, books and papers give a detailed idea about them, this tool aims to provide a comprehensive gist of a distributed system that you would want to design. This can help in focused research while designing a system, even can help you prepare for interviews.
 
@@ -28,7 +28,7 @@ python main.py
 Otherwise to run the streamlit application, run
 
 ```shell
-streamlit run app.py
+streamlit run Home.py
 ```
 
 

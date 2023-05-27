@@ -2,7 +2,7 @@ import os
 from getpass import getpass
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
-from gensysai.designer import SystemDesigner
+from gensysai.designer.system import SystemDesigner
 
 
 if __name__ == '__main__':

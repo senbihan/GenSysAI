@@ -24,6 +24,7 @@ class Prompts:
         3. The Storage component should be present and the requirements should be stated clearly.
         4. Cache component should only be present if there is a necessary of caching of data.
         5. Load Balancer component should specify its requirements very specifically.
+        6. Clearly mention the responsibility of the component in 2-3 sentences.
 
         {format_instructions}
 
@@ -39,7 +40,7 @@ class Prompts:
         3. On Storage type component, you should identify what type of data to store from the description of the input 
         and which database should be appropriate for the data, 
         4. if there are different data types, consider different and best storage for each of them.
-        5. Suggest a well-known cloud offering that satisfies the requirement of the component from {cloud_provider} cloud provider.
+        5. Suggest a well-known cloud offering that satisfies the requirements for each data storage that you identified, from {cloud_provider} cloud provider.
 
         You should iterate to each of the points mentioned above to refine the design.
 
@@ -69,7 +70,7 @@ class Prompts:
         {{
             "requirement": "Responsible for checking out one or more items in a cart and places an order",
             "apis": ["AddToCart(item) - Adds one item to the cart", "DeleteFromCart(item) - deletes one item from the cart.", "CreateOrder(orderId) - Create an order from the cart items.", "PlaceOrder(orderId) - Initiates the payment for the order"],
-            "conclusion": "With the apis, the ordering service fulfills the minimal requirements of placing an order."
+            "conclusion": "With the apis, the ordering service fulfills the overall requirements of placing an order. There are room for improvements as well."
         }}
 
 
