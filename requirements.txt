@@ -1,4 +1,9 @@
 langchain==0.0.181
 pydantic==1.10.7
+openapi-schema-pydantic==1.2.4
 streamlit==1.22.0
+streamlit-ace==0.1.1
 python-dotenv==1.0.0
+openai==0.27.6
+typing-inspect==0.8.0
+typing_extensions==4.5.0
